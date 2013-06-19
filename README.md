@@ -1,4 +1,4 @@
 portfolio_template
 ==================
 
-Portfolio website templates to be published on the Creative Market
+Portfolio website templates to be launched on the Creative Market
