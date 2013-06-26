@@ -1,0 +1,176 @@
+html {
+	font-family: Georgia, Cambria, serif;
+	color: #444;
+}
+body {
+	margin: 0;
+}
+.clear {
+	clear: both;
+}
+
+
+/*----Main banner fade-in----*/
+
+@-webkit-keyframes fade-in { 0% { opacity:0;} 100% { opacity:1; } }
+@-moz-keyframes fade-in { 0% { opacity:0; } 100% { opacity:1; } }
+@keyframes fade-in { 0% { opacity:0; } 100% { opacity:1; } }
+
+.fade-in {
+	opacity:0; 
+    -webkit-animation:fade-in ease-in-out 1; 
+    -moz-animation:fade-in ease-in-out 1;
+    animation:fade-in ease-in-out 1;
+ 
+    -webkit-animation-fill-mode:forwards;	
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+ 
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+
+}
+.fade-in.first {
+	-webkit-animation-delay: 0.6s;
+	-moz-animation-delay: 0.6s;
+	animation-delay: 0.6s;
+	background-attachment: fixed;
+}
+
+.fade-in.second {
+	-webkit-animation-delay: 1s;
+	-moz-animation-delay: 1s;
+	animation-delay: 1s;
+}
+
+.fade-in.main {
+	-webkit-animation-delay: 1.3s;
+	-moz-animation-delay: 1.3s;
+	animation-delay: 1.3s;
+
+}
+
+
+/*----banner transition slide up----*/
+
+@-webkit-keyframes slide-up { 
+		0% { background-color: rgba(215, 235, 225, 0); -webkit-transform: translateY(0);} 
+		100% { background-color: rgba(215, 235, 225, 1); -webkit-transform: translateY(-180px); } 
+}
+@-moz-keyframes slide-up { 
+		0% { background-color: rgba(215, 235, 225, 0); -moz-transform: translateY(0); } 
+		100% { background-color: rgba(215, 235, 225, 1); -moz-transform: translateY(-180px); }
+}
+@keyframes slide-up { 
+		0% { background-color: rgba(215, 235, 225, 0); transform: translateY(0); } 
+		100% { background-color: rgba(215, 235, 225, 1); transform: translateY(-180px); } 
+}
+
+.transition {
+	-webkit-animation: slide-up ease-in-out 1; 
+    -moz-animation:slide-up ease-in-out 1;
+    animation:slide-up ease-in-out 1;
+    
+    -webkit-animation-fill-mode:forwards;	
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode:forwards;
+ 
+    -webkit-animation-duration:0.8s;
+    -moz-animation-duration:0.8s;
+    animation-duration:0.8s;
+    
+    -webkit-animation-delay: 0.3s;
+	-moz-animation-delay: 0.3s;
+	animation-delay: 0.3s;
+	
+	
+}
+
+
+
+/*----main banner styling----*/
+
+
+#main-banner {
+	background: url(../img/hanieparklogo.png) no-repeat center bottom; 
+	height: 125px;
+	padding-top: 180px;
+}
+
+
+nav ul {
+	padding: 10px 0 20px 0;
+	width: 307px;
+	margin: 0 auto;
+	
+}
+
+nav ul li{
+	display: inline-block;
+	float: left;
+	padding: 0 25px;
+	opacity: 0.6;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+nav ul li:hover {
+	opacity: 1;
+}
+
+nav ul li a.active {
+	border-bottom: 1px solid #444;
+}
+
+nav ul li a {
+	text-decoration: none;
+	cursor: pointer;
+	color: #444;
+}
+
+.fix {
+	position: fixed;
+	width: 100%;
+	z-index: 9999;
+
+}
+
+
+/*----main contents styling----*/
+
+#container {
+	margin: -140px 25% 0 25%;
+	font-family: Corbel, sans-serif;
+	color: #555;
+}
+
+#container header{
+	color: #3b8686;
+}
+
+#container p {
+	text-indent: 30px;
+}
+
+
+.contents {
+	width: 500px;
+	height: 600px;
+}
+
+.contents.a {
+	background-color: red;
+}
+.contents.b {
+	background-color: green;
+}
+
+.contents.c {
+	background-color: aqua;
+}
+
+#empty {
+	height: 700px;
+}
