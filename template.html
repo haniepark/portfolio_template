@@ -20,19 +20,20 @@
 
 <!-- SHORTCUT ICON -->
 
-		<link rel="shortcut icon" href="#">
-		
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="img/favicon.ico" type="image/x-icon">		
 
 <!-- CSS
   ================================================== -->
         <link rel="stylesheet" href="css/stylesheet.css">
-
+		<link rel="stylesheet" href="css/nivo-slider.css">
+		<link rel="stylesheet" href="nivo-slider/light/light.css">
 <!-- jQuery
   ================================================== -->	
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 		<script type="text/javascript" src="js/jquery-1.9.0.js"/></script>
 		<script type="text/javascript" src="js/script.js"> </script>
-
+		<script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
     </head>
 
 <!-- MAIN CONTENT
@@ -42,10 +43,9 @@
 
 <!-- HEADER of the portfolio -->
 
-		<section id="top-container">
-			<a href="template.html">		
+		<section id="top-container">	
 				<header id="main-banner" class="fade-in first"><!--Your name(or title) go here--></header>
-			</a>
+
 <!-- NAVIGATION of the portfolio -->
 
 		  <nav class="fade-in second">
@@ -63,9 +63,11 @@
 <!-- BODY  of the portfolio -->
 		<section id="container" class="fade-in main">
 			
-			<section class="contents a" id="about">
+			<section class="contents" id="about">
 				<article>
+			
 			<!--ABOUT content goes here-->
+			
 					<header>
 						<h2>About</h2>
 					</header>		
@@ -74,27 +76,56 @@
 			 </section>
 			
 						
-			<section class="contents b" id="portfolio">
+			<section class="contents" id="portfolio">
 				<article>
+		
 			<!--PORTFOLIO content goes here-->	  
+		
 					<header>
 						<h2>Portfolio</h2>
-					</header>		
-						<p>Front-end Web Developer based in Waterloo, ON</p>
+					</header>
+					
+					<div class="slider-wrapper theme-light"> 
+						<div class="ribbon"></div> 
+						<div id="slider" class="nivoSlider"> 
+							<img src="img/slide1.png" alt="" title="Description for slide 1 goes here"/> 
+							<img src="img/slide2.png" alt="" title="Description for slide 2 goes here"/> 
+							<img src="img/slide3.png" alt="" title="Description for slide 3 goes here"/> 
+							<img src="img/slide4.png" alt="" title="Description for slide 4 goes here"/> 
+						</div> 
+					</div>					
 				</article>
 			 </section>
 			
 			 
-			 <section class="contents c" id="contact">
+			 <section class="contents" id="contact">
 				<article>
-				<!--CONTACT content goes here-->
+			
+			<!--CONTACT content goes here-->
+			
 					<header>
 						<h2>Contact</h2>
 					</header>		
-					<p>Front-end Web Developer based in Waterloo, ON</p>	
+					
+					<p>Get in touch with me</p>	
+					
+					<div id="social">
+						<ul>
+							<li class="social-link"><a href="#" target="_blank">e-mail</a></li>
+							<li class="social-link"><a href="#" target="_blank">facebook</a></li>
+							<li class="social-link"><a href="#" target="_blank">twitter</a></li>
+							<li class="social-link"><a href="#" target="_blank">dribbble</a></li>
+							<li class="social-link"><a href="#" target="_blank">linkedIn</a></li>
+						</ul>
+					</div>
 				</article>
-			 </section>
+				<div class="clear"></div>
+			 </section>	 
 		</section>  <!-- END of #container-->
+		
+		<!-- Scroll to top -->
+		<div id="top"><a data-nav="#top-container"><p>^<br>top</p></a></div>
+	
 	</body>
 	
 <!-- MAIN CONTENT ends

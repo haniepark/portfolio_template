@@ -1,58 +1,36 @@
 $(document).ready(function(){
 
-	$('#container').hide();
-	
-/*	$('#top-container').on('click', 'a', function(){
+	$('#container, #top').hide();
 		
-		var seeker = $(this).attr('href');
+	$('#top-container').on('click', 'a', function(){
+
 		
-		$('#top-container').addClass('transition');
-		$('#container').show(1300);
-		$('html,body').animate({
-			scrollTop: $("#port").offset().top
-			}, 'slow');
-
-	});*/
-
-	
-	
-	$('#top-container').on('click', 'a', function(e){
-		e.preventDefault();	
 		var seeker = $(this).data('nav');
 		
 		$('#top-container').addClass('transition');
-		$('#container').show(1300, function(){
+		
+		$('#container, #top').show(1300, function(){
 			$('html,body').animate({
-			scrollTop: $(seeker).offset().top - 150
+			scrollTop: $(seeker).offset().top - 50
 			}, 'slow');
+		
+			$(document).on('click', '#top a', function(){
+				var moveTop = $('#top a').data('nav');
+				$('html,body').animate({
+					scrollTop: $(moveTop).offset().top 
+					}, 'slow');	
+			});	
 		});
-				
 	});
+	
 
 
 
-	$(window).scroll(function (e) {
-		e.preventDefault();
-    	var seeker = $(this).data('nav');
-    	
-    	if ($(window).scrollTop() > 100) {
-        	$('#top-container').addClass("fix");
+// nivo-slider function
 
-   		} else {
-	    	$('#top-container').removeClass("fix");
-		}
-	});
-
+	$(window).load(function() {
+   		 $('#slider').nivoSlider();   		 	 		 
+   	});
 	
-/*	
-	$("li a").click(function(e){
-    	 e.preventDefault();
-		 $(this).addClass("active");
-		 $("li a.active").removeClass("active");
-		 $(this).addClass("active");
-	});*/
-	
-	
-	
-	
+			
 });
